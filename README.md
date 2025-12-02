@@ -1,6 +1,7 @@
 # Inspired by:
 - https://www.youtube.com/watch?v=B0TJC4lmzEM
 - https://inference-docs.cerebras.ai/cookbook/agents/sales-agent-cerebras-livekit
+- https://github.com/livekit/agents?tab=readme-ov-file#simple-voice-agent
 
 ## Voice Agendt architecture:
 ### User speech input:
@@ -28,18 +29,23 @@ python3 -m pip --version
 ### Create requirements file:
 python pip freeze > requirements.txt
 ### Install requirements 
+curl -sSL https://get.livekit.io/cli | bash
+sudo apt-get install libportaudio2
 python -m pip install -r requirements.txt
 
 ### Run local http://127.0.0.1:8000/
 python manage.py runserver
 
+### Run cli voice agent:
+python manage.py voice_agent_command user_name=test-user
 
 
 ### Tools
 - livekit-cli for dev env.
-- cloud.cerebras.ai for fastes AI communication
+- cloud.cerebras.ai as AI provider of fastes AI communication with AI voice agents
 - cartesia.ai for fastest Voice AI STT/TTS
 
 ### Packages 
 - python-dotenv for work with env
 - django for web ui
+- livekit for real-time media application (Call rooms and etc.)
