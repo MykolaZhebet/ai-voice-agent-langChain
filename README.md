@@ -2,6 +2,7 @@
 - https://www.youtube.com/watch?v=B0TJC4lmzEM
 - https://inference-docs.cerebras.ai/cookbook/agents/sales-agent-cerebras-livekit
 - https://github.com/livekit/agents?tab=readme-ov-file#simple-voice-agent
+- https://inference-docs.cerebras.ai/cookbook/agents/build-your-own-perplexity#step-1:-environment-setup
 
 ## Voice Agendt architecture:
 ### User speech input:
@@ -40,16 +41,17 @@ python manage.py runserver
 python chat/management/commands/voice_agent_command.py console   
 ### Run voice product manager(context avare)
 python ./chat/management/commands/voice_product_expert.py console
-
+### Run deep research assistant that can search web, analyzes multiple sources, and provide structured insights
+python3 webUI/chat/management/commands/text_research_expert.py --query="best gift on New Year"
 ### 
 
 
 
 ### Tools
 - livekit-cli for dev env.
-- cloud.cerebras.ai as AI provider of fastes AI communication with AI voice agents
+- cloud.cerebras.ai as AI provider of fastes AI communication with AI(LLM) 50x time faster
 - cartesia.ai for fastest Voice AI STT/TTS
-
+- Exa API: The fastest search API engine for AI
 ### Packages 
 - python-dotenv for work with env
 - django for web ui
