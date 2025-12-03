@@ -37,7 +37,12 @@ python -m pip install -r requirements.txt
 python manage.py runserver
 
 ### Run cli voice agent:
-python manage.py voice_agent_command user_name=test-user
+python chat/management/commands/voice_agent_command.py console   
+### Run voice product manager(context avare)
+python ./chat/management/commands/voice_product_expert.py console
+
+### 
+
 
 
 ### Tools

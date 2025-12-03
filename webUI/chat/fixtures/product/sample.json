@@ -1,0 +1,64 @@
+{
+  "products": [
+    {
+      "model": "chat.product",
+      "name": "Premium Software Suite",
+      "description": "All-in-one business management platform",
+      "key_benefits": [
+        "Increases productivity by 40%",
+        "Reduces operational costs",
+        "Seamless integration"
+      ],
+      "price_range": "$99-299/month",
+      "target_customers": "SMB, Enterprise"
+    }
+  ],
+  "pricing": [
+    {
+      "model": "chat.price",
+      "name":"starter",
+      "price": 99,
+      "features": [
+        "Basic CRM",
+        "Email integration"
+      ]
+    },
+    {
+      "model": "chat.price",
+      "name": "professional",
+      "price": 199,
+      "features": [
+        "Advanced analytics",
+        "Custom workflows"
+      ]
+    },
+    {
+      "model": "chat.price",
+      "name": "enterprise",
+      "price": 299,
+      "features": [
+        "White-label",
+        "API access",
+        "Dedicated support"
+      ]
+    }
+],
+  "objection_handlers": 
+  [
+    {   
+        "model": "chat.objection",
+        "name": "too_expensive",
+        "context": "I understand cost is important. Let's look at the ROI - most clients see 3x return in the first 6 months."
+    },
+    {
+        "model": "chat.objection",
+        "name": "need_time_to_think",
+        "context": "I appreciate you want to make a thoughtful decision. What specific concerns can I address right now?"
+    },
+    {
+        "model": "chat.objection",
+        "name": "happy_with_current_solution",
+        "context": "That's great! What would need to change for you to consider switching?"
+    }
+  ]
+}
