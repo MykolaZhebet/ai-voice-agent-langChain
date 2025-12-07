@@ -3,6 +3,7 @@
 - https://inference-docs.cerebras.ai/cookbook/agents/sales-agent-cerebras-livekit
 - https://github.com/livekit/agents?tab=readme-ov-file#simple-voice-agent
 - https://inference-docs.cerebras.ai/cookbook/agents/build-your-own-perplexity#step-1:-environment-setup
+- https://inference-docs.cerebras.ai/cookbook/agents/automate-user-research
 
 ## Voice Agendt architecture:
 ### User speech input:
@@ -38,12 +39,14 @@ python -m pip install -r requirements.txt
 python manage.py runserver
 
 ### Run cli voice agent:
-python chat/management/commands/voice_agent_command.py console   
+python webUI/chat/management/commands/voice_agent_command.py console   
 ### Run voice product manager(context avare)
-python ./chat/management/commands/voice_product_expert.py console
+python webUI/chat/management/commands/voice_product_expert.py console
 ### Run deep research assistant that can search web, analyzes multiple sources, and provide structured insights
 python3 webUI/chat/management/commands/text_research_expert.py --query="best gift on New Year"
-### 
+### Run example langGraph AI agent which generated questions, generate personas, gather their responses and summarize those responses
+python3 webUI/chat/management/commands/text_langGraph_research_expert.py
+
 
 
 
